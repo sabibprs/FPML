@@ -136,11 +136,6 @@ if st.button("Prediksi Tingkat Stres"):
         "Month":[bulan]
     })
 
-    data = pd.DataFrame(
-        imputer.transform(data),
-        columns=data.columns
-    )
-
     hasil = model.predict(data)[0]
     probabilitas = model.predict_proba(data)[0]
 
